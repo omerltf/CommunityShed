@@ -5,4 +5,6 @@
 
     <h1>Home</h1>
 
+    <asp:HyperLink ID="PersonAddHyperLink" runat="server" Text="Add Person" NavigateUrl="~/PersonAdd.aspx" />
+
 </asp:Content>
