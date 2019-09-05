@@ -10,78 +10,60 @@
 namespace CommunityShed {
     
     
-    public partial class Site {
+    public partial class CommunityEdit {
         
         /// <summary>
-        /// head control.
+        /// CommunityNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label CommunityNameLabel;
         
         /// <summary>
-        /// HomeHyperLink control.
+        /// CommunityNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomeHyperLink;
+        protected global::System.Web.UI.WebControls.TextBox CommunityNameTextBox;
         
         /// <summary>
-        /// PersonAddHyperLink control.
+        /// CommunityIsAvailableCheckBoxLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PersonAddHyperLink;
+        protected global::System.Web.UI.WebControls.Label CommunityIsAvailableCheckBoxLabel;
         
         /// <summary>
-        /// CommunityAddHyperLink control.
+        /// CommunityIsAvailableCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CommunityAddHyperLink;
+        protected global::System.Web.UI.WebControls.CheckBox CommunityIsAvailableCheckBox;
         
         /// <summary>
-        /// PersonEditHyperLink control.
+        /// EditCommunitySubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PersonEditHyperLink;
+        protected global::System.Web.UI.WebControls.Button EditCommunitySubmit;
         
         /// <summary>
-        /// CommunityEditHyperLink control.
+        /// CancelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CommunityEditHyperLink;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button CancelButton;
     }
 }

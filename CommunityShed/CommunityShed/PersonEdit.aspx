@@ -27,7 +27,7 @@
         </div>
 
         <div class="p-3" style="float: right;">
-            <asp:Button CssClass="btn btn-warning" ID="EditPersonSubmit" Text="Make Changes" runat="server" OnClick="EditPersonSubmit_Click" />
+            <asp:Button CssClass="btn btn-danger" ID="EditPersonSubmit" Text="Make Changes" runat="server" OnClick="EditPersonSubmit_Click" />
         </div>
 
         <div class="p-3" style="float: left;">

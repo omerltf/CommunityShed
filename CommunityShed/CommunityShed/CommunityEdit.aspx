@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CommunityAdd.aspx.cs" Inherits="CommunityShed.CommunityAdd" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CommunityEdit.aspx.cs" Inherits="CommunityShed.CommunityEdit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Add Community</h2>
+
+    <h2>Edit Community</h2>
 
     <div>
 
@@ -20,7 +20,12 @@
         </div>
 
         <div class="p-3" style="float: right;">
-            <asp:Button CssClass="btn btn-primary" ID="AddCommunitySubmit" Text="Submit" runat="server" OnClick="AddCommunitySubmit_Click" />
+            <asp:Button CssClass="btn btn-danger" ID="EditCommunitySubmit" Text="Submit Changes" runat="server" OnClick="EditCommunitySubmit_Click" />
+        </div>
+
+        <div class="p-3" style="float: left;">
+            <asp:Button CssClass="btn btn-warning" ID="CancelButton" Text="Cancel Changes" runat="server" OnClick="CancelButton_Click" /> 
         </div>
     </div>
+
 </asp:Content>

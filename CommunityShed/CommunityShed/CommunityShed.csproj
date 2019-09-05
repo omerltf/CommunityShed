@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CommunityAdd.aspx" />
+    <Content Include="CommunityEdit.aspx" />
     <Content Include="packages.config" />
     <Content Include="PersonAdd.aspx" />
     <Content Include="PersonEdit.aspx" />
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="CommunityAdd.aspx.designer.cs">
       <DependentUpon>CommunityAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityEdit.aspx.cs">
+      <DependentUpon>CommunityEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunityEdit.aspx.designer.cs">
+      <DependentUpon>CommunityEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Default.aspx.cs">
