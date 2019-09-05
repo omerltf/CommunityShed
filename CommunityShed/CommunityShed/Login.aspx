@@ -35,7 +35,7 @@
     </div>
 
     <div>
-        <asp:HyperLink runat="server" NavigateUrl="~/AddPerson.aspx" Text="Register" />
+        <asp:HyperLink runat="server" NavigateUrl="~/PersonAdd.aspx" Text="Register" />
     </div>
 
 </asp:Content>
