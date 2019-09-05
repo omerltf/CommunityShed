@@ -5,6 +5,11 @@
 
     <asp:ValidationSummary runat="server" />
 
+    <asp:CustomValidator ID="PasswordCheck" runat="server" 
+        ErrorMessage="Login failed due to an incorrect email or password." 
+        Display="None" 
+        OnServerValidate="PasswordCheck_ServerValidate" />
+
     <div>
         <asp:Label ID="EmailLabel" runat="server" Text="Email: " AssociatedControlID="EmailTextBox" />
         <asp:TextBox ID="EmailTextBox" runat="server" />
@@ -27,6 +32,10 @@
 
     <div>
         <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
+    </div>
+
+    <div>
+        <asp:HyperLink runat="server" NavigateUrl="~/AddPerson.aspx" Text="Register" />
     </div>
 
 </asp:Content>
