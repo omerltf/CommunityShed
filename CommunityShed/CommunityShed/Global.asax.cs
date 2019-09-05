@@ -1,6 +1,9 @@
-﻿using CommunityShed.Security;
+﻿using CommunityShed.Data;
+using CommunityShed.Security;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Principal;
 using System.Threading;
@@ -34,10 +37,27 @@ namespace CommunityShed
 
                 CustomIdentity customIdentity = new CustomIdentity(ticket);
 
-                // TODO Get user information including roles from the database
-                string[] roles = {};
+                string currentUserEmail = ticket.Name;
 
-                CustomPrincipal principal = new CustomPrincipal(customIdentity, roles);
+                DataTable currentUserInformationDataTable = 
+                    DatabaseHelper.Retrieve(@"
+                        select p.Name, pc.CommunityId, r.RoleName
+                        from Person p
+                        join PersonCommunity pc on pc.PersonId = p.PersonId
+                        join PersonCommunityRole pcr on pcr.PersonCommunityId = pc.PersonCommunityId
+                        join Role r on r.RoleId = pcr.RoleId
+                        where p.Email = @Email
+                        order by CommunityId, RoleName
+                    ",
+                        new SqlParameter("@Email", currentUserEmail));
+
+                if (currentUserInformationDataTable.Rows.Count == 0)
+                {
+                    throw new ApplicationException($"Problem encountered retrieving user information for email: {currentUserEmail}");
+                }
+
+                CustomPrincipal principal = new CustomPrincipal(
+                    customIdentity, currentUserInformationDataTable);
 
                 HttpContext.Current.User = principal;
                 Thread.CurrentPrincipal = principal;

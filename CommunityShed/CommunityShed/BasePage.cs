@@ -8,7 +8,7 @@ namespace CommunityShed
 {
     public class BasePage : System.Web.UI.Page
     {
-        protected CustomPrincipal CustomUser
+        public CustomPrincipal CustomUser
         {
             get
             {

@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <asp:Panel ID="UserInformation" runat="server">
-                <span class="navbar-text pr-3">Welcome <%= Page.User.Identity.Name %>!</span>                
+                <span class="navbar-text pr-3">Welcome <%= CustomPage.CustomUser.PersonName %>!</span>                
                 <asp:Button ID="LogoutButton" runat="server" CssClass="btn btn-warning" Text="Logout" OnClick="LogoutButton_Click" />
             </asp:Panel>
         </nav>

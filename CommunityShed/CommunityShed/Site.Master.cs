@@ -10,6 +10,14 @@ namespace CommunityShed
 {
     public partial class Site : System.Web.UI.MasterPage
     {
+        public BasePage CustomPage
+        {
+            get
+            {
+                return (BasePage)Page;
+            }
+        }
+
         protected void Page_Init(object sender, EventArgs e)
         {
             navbarNav.Visible = Request.IsAuthenticated;
