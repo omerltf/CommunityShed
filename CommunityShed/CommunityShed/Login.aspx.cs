@@ -11,12 +11,17 @@ namespace CommunityShed
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
+            // TODO Add custom validator for the password validation
 
+            if (Page.IsValid)
+            {
+                // TODO Retrieve the person
+                // TODO Verify the password
+            }
         }
     }
 }
