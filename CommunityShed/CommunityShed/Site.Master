@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <asp:HyperLink CssClass="nav-link" ID="PersonAddHyperLink" NavigateUrl="~/PersonAdd.aspx" Text="Person" runat="server" />
                 </li>
+                <li class="nav-item">
+                    <asp:HyperLink CssClass="nav-link" ID="CommunityAddHyperLink" NavigateUrl="~/CommunityAdd.aspx" Text="Community" runat="server" />
+                </li>
             </ul>
         </div>
     </nav>

@@ -7,4 +7,6 @@
 
     <asp:HyperLink ID="PersonAddHyperLink" runat="server" Text="Add Person" NavigateUrl="~/PersonAdd.aspx" />
 
+    <asp:HyperLink ID="CommunityAddHyperLink" runat="server" Text="Add Community" NavigateUrl="~/CommunityAdd.aspx" />
+
 </asp:Content>

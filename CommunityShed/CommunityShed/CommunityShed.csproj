@@ -66,8 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CommunityAdd.aspx" />
     <Content Include="packages.config" />
     <Content Include="PersonAdd.aspx" />
+    <Content Include="PersonEdit.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -81,6 +83,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommunityAdd.aspx.cs">
+      <DependentUpon>CommunityAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunityAdd.aspx.designer.cs">
+      <DependentUpon>CommunityAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -95,6 +104,13 @@
     </Compile>
     <Compile Include="PersonAdd.aspx.designer.cs">
       <DependentUpon>PersonAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonEdit.aspx.cs">
+      <DependentUpon>PersonEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonEdit.aspx.designer.cs">
+      <DependentUpon>PersonEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
