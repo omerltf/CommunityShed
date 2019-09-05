@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="NotAuthorized.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -96,6 +97,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -114,6 +118,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NotAuthorized.aspx.cs">
+      <DependentUpon>NotAuthorized.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotAuthorized.aspx.designer.cs">
+      <DependentUpon>NotAuthorized.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PersonAdd.aspx.cs">
       <DependentUpon>PersonAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,6 +133,8 @@
       <DependentUpon>PersonAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CustomIdentity.cs" />
+    <Compile Include="Security\CustomPrincipal.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Community Shed</a>
+            <a class="navbar-brand" href="#">Community Shed 🛠️</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +31,8 @@
                 </ul>
             </div>
             <asp:Panel ID="UserInformation" runat="server">
-                <asp:Button ID="LogoutButton" runat="server" Text="Logout" OnClick="LogoutButton_Click" />
+                <span class="navbar-text pr-3">Welcome <%= Page.User.Identity.Name %>!</span>                
+                <asp:Button ID="LogoutButton" runat="server" CssClass="btn btn-warning" Text="Logout" OnClick="LogoutButton_Click" />
             </asp:Panel>
         </nav>
 

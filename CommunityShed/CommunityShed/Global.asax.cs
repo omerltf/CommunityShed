@@ -1,6 +1,9 @@
-﻿using System;
+﻿using CommunityShed.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
+using System.Threading;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
@@ -22,6 +25,23 @@ namespace CommunityShed
 
         protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
         {
+            IPrincipal user = HttpContext.Current.User;
+
+            if (user.Identity.IsAuthenticated && user.Identity.AuthenticationType == "Forms")
+            {
+                FormsIdentity formsIdentity = (FormsIdentity)user.Identity;
+                FormsAuthenticationTicket ticket = formsIdentity.Ticket;
+
+                CustomIdentity customIdentity = new CustomIdentity(ticket);
+
+                // TODO Get user information including roles from the database
+                string[] roles = {};
+
+                CustomPrincipal principal = new CustomPrincipal(customIdentity, roles);
+
+                HttpContext.Current.User = principal;
+                Thread.CurrentPrincipal = principal;
+            }
         }
     }
 }

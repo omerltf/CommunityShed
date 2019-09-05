@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PersonAdd.aspx.cs" Inherits="CommunityShed.PersonAdd" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <h1>Register</h1>
 
     <div class="form-group p-3 col-8">
         <asp:Label ID="NameLabel" Text="Name: " runat="server" AssociatedControlID="NameTextBox" />
@@ -24,10 +24,9 @@
 
     <div class="p-3" style="float: right;">
         <asp:Button CssClass="btn btn-primary" ID="AddPersonSubmit" Text="Submit" runat="server" OnClick="AddPersonSubmit_Click" />
-    </div>
-
-    <div>
-        <asp:HyperLink runat="server" NavigateUrl="~/Login.aspx" Text="Login" />
+        <asp:HyperLink runat="server" 
+            CssClass="btn btn-outline-secondary"
+            NavigateUrl="~/Login.aspx" Text="Login" />
     </div>
 
 </asp:Content>

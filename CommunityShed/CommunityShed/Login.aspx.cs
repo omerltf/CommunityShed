@@ -11,10 +11,14 @@ using System.Web.UI.WebControls;
 
 namespace CommunityShed
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Login : BasePage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Init(object sender, EventArgs e)
         {
+            if (Request.IsAuthenticated)
+            {
+                Response.Redirect("~/NotAuthorized.aspx");
+            }
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
