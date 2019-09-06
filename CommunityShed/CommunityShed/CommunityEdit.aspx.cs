@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace CommunityShed
 {
-    public partial class CommunityEdit : System.Web.UI.Page
+    public partial class CommunityEdit : BasePage
     {
         //int currentUserId = 0; //get current logged in user ID
         //int currentCommunityId = 0; //get communityId of community to be edited
@@ -21,6 +21,19 @@ namespace CommunityShed
 
             //if (!IsPostBack)
             //{
+            //    DataTable dropDownDataTable = DatabaseHelper.Retrieve(@"
+            //        select CommunityName, CommunityId
+            //        from Community
+            //    ");
+            //    CommunitiesDropDownList.DataTextField = "CommunityName";
+            //    CommunitiesDropDownList.DataValueField = "CommunityId";
+            //    CommunitiesDropDownList.AppendDataBoundItems = true;
+            //    CommunitiesDropDownList.DataSource = dropDownDataTable.Rows;
+            //    CommunitiesDropDownList.DataBind();
+
+                
+
+
             //    DataTable dt = DatabaseHelper.Retrieve(@"
             //        select CommunityName, CreatorPersonId, IsOpen
             //        from Community
@@ -64,5 +77,10 @@ namespace CommunityShed
         {
             Response.Redirect("~/Default.aspx");
         }
+
+        /*protected void CommunitiesDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentCommunityId = int.Parse(CommunitiesDropDownList.SelectedValue);
+        }*/
     }
 }

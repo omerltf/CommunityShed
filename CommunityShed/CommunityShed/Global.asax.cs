@@ -41,7 +41,7 @@ namespace CommunityShed
 
                 DataTable currentUserInformationDataTable = 
                     DatabaseHelper.Retrieve(@"
-                        select p.Name, pc.CommunityId, r.RoleName
+                        select p.Name, pc.CommunityId, r.RoleName, p.PersonId
                         from Person p
                         join PersonCommunity pc on pc.PersonId = p.PersonId
                         join PersonCommunityRole pcr on pcr.PersonCommunityId = pc.PersonCommunityId
