@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityShed.State;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -59,9 +60,24 @@ namespace CommunityShed.Security
             }
         }
 
+        /// <summary>
+        /// Checks to see if the current user is assigned
+        /// to the provided role for the user's active community.
+        /// </summary>
+        /// <param name="role">The role to check for.</param>
+        /// <returns>A boolean indicating if the current user has the provided role for the user's active community.</returns>
         public bool IsInRole(string role)
         {
-            throw new ApplicationException("Call the `IsInRole` method that accepts a community ID.");
+            int? communityId = CommunityState.GetActiveCommunity();
+
+            if (communityId != null)
+            {
+                return IsInRole(communityId.Value, role);
+            }
+            else
+            {
+                throw new ApplicationException("The current user's active community must be set before calling this overload of the `IsInRole` method.");
+            }
         }
 
         /// <summary>

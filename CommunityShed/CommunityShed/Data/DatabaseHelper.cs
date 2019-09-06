@@ -10,7 +10,7 @@ namespace CommunityShed.Data
 {
     public static class DatabaseHelper
     {
-        private const string ConnectionStringName = "Library";
+        private const string ConnectionStringName = "Database";
 
         public static DataTable Retrieve(string sql, params SqlParameter[] parameters)
         {
@@ -33,6 +33,23 @@ namespace CommunityShed.Data
             }
 
             return dt;
+        }
+
+        public static void Execute(string sql, params SqlParameter[] parameters)
+        {
+            using (var connection = new SqlConnection(GetConnectionString()))
+            {
+                using (var command = new SqlCommand(sql, connection))
+                {
+                    foreach (var parameter in parameters)
+                    {
+                        command.Parameters.Add(parameter);
+                    }
+
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
         public static int? Insert(string sql, params SqlParameter[] parameters)
