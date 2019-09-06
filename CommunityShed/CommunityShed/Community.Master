@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Community.master.cs" Inherits="CommunityShed.CommunityMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="main" runat="server">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="card text-white bg-primary my-4">
+                    <div class="card-body">
+                        <h2><asp:Label ID="CommunityNameLabel" runat="server" /></h2>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-3">
+
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-secondary list-group-item-action active">
+                    Cras justo odio
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-secondary list-group-item-action">Dapibus ac facilisis in</a>
+                  <a href="#" class="list-group-item list-group-item-secondary list-group-item-action">Morbi leo risus</a>
+                  <a href="#" class="list-group-item list-group-item-secondary list-group-item-action">Porta ac consectetur ac</a>
+                  <a href="#" class="list-group-item list-group-item-secondary list-group-item-action">Vestibulum at eros</a>
+                </div>
+
+            </div>
+
+            <div class="col-9">
+
+                <asp:ContentPlaceHolder ID="main" runat="server">
+        
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</asp:Content>

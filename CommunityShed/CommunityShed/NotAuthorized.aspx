@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Not Authorized" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NotAuthorized.aspx.cs" Inherits="CommunityShed.NotAuthorized" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 
     <h1>Not Authorized</h1>
 
