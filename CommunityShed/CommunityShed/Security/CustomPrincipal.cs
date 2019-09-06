@@ -17,6 +17,7 @@ namespace CommunityShed.Security
             this.identity = identity;
 
             PersonName = currentUserInformation.Rows[0].Field<string>("Name");
+            PersonId = currentUserInformation.Rows[0].Field<int>("PersonId");
 
             var communityRoles = new List<CommunityRole>();
 
@@ -36,6 +37,11 @@ namespace CommunityShed.Security
         /// The current user's name.
         /// </summary>
         public string PersonName { get; set; }
+
+        /// <summary>
+        /// The current user's Id.
+        /// </summary>
+        public int PersonId { get; set; }
 
         public IIdentity Identity
         {
