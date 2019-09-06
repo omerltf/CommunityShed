@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace CommunityShed
 {
-    public partial class PersonAdd : System.Web.UI.Page
+    public partial class PersonAdd : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
