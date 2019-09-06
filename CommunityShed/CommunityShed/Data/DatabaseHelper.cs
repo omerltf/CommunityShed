@@ -88,5 +88,24 @@ namespace CommunityShed.Data
         {
             return ConfigurationManager.ConnectionStrings[ConnectionStringName].ConnectionString;
         }
+
+
+        public static void Execute(string sql, params SqlParameter[] parameters)
+        {
+            using (var connection = new SqlConnection(GetConnectionString()))
+            {
+                using (var command = new SqlCommand(sql, connection))
+                {
+                    foreach (var parameter in parameters)
+                    {
+                        command.Parameters.Add(parameter);
+                    }
+
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
