@@ -79,6 +79,7 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Community.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -101,12 +102,22 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Community.aspx.cs">
       <DependentUpon>Community.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Community.aspx.designer.cs">
       <DependentUpon>Community.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Community.Master.cs">
+      <DependentUpon>Community.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Community.Master.designer.cs">
+      <DependentUpon>Community.Master</DependentUpon>
     </Compile>
     <Compile Include="CommunityAdd.aspx.cs">
       <DependentUpon>CommunityAdd.aspx</DependentUpon>
@@ -175,6 +186,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="State\CommunityState.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
