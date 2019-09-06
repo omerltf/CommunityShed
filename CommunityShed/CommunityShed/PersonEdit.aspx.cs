@@ -41,18 +41,15 @@ namespace CommunityShed
         {
             //string name = NameTextBox.Text;
             //string email = EmailTextBox.Text;
-            //string enteredPassword = PasswordTextBox.Text;
 
             //DatabaseHelper.Update(@"
             //    update Person set
             //        Name=@Name,
             //        Email=@Email
-            //        Password=@Password
             //    where PersonId=@PersonId
             //",
             //    new SqlParameter("@Name", name),
             //    new SqlParameter("@Email", email),
-            //    new SqlParameter("@Password", enteredPassword),
             //    new SqlParameter("@PersonId", personId /*Get Person Id*/));
 
             //Response.Redirect("~/Default.aspx");

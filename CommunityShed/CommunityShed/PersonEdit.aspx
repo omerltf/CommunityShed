@@ -20,10 +20,6 @@
                 <asp:TextBox ID="EmailTextBox" CssClass="form-control" runat="server" />
             </div>
 
-            <div class="form-group col p-3">
-                <asp:Label ID="PasswordLabel" Text="Password: " runat="server" AssociatedControlID="PasswordTextBox" />
-                <asp:TextBox ID="PasswordTextBox" CssClass="form-control" TextMode="Password" runat="server" />
-            </div>
         </div>
 
         <div class="p-3" style="float: right;">
