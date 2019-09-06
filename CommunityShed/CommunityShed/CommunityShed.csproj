@@ -70,6 +70,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+	<Content Include="CommunityAdd.aspx" />
+    <Content Include="CommunityEdit.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="NotAuthorized.aspx" />
@@ -82,6 +84,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="PersonAdd.aspx" />
+    <Content Include="PersonEdit.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
@@ -97,7 +100,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasePage.cs">
+    <Compile Include="CommunityAdd.aspx.cs">
+      <DependentUpon>CommunityAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunityAdd.aspx.designer.cs">
+      <DependentUpon>CommunityAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityEdit.aspx.cs">
+      <DependentUpon>CommunityEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunityEdit.aspx.designer.cs">
+      <DependentUpon>CommunityEdit.aspx</DependentUpon>
+    </Compile>
+	<Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
@@ -131,6 +148,13 @@
     </Compile>
     <Compile Include="PersonAdd.aspx.designer.cs">
       <DependentUpon>PersonAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonEdit.aspx.cs">
+      <DependentUpon>PersonEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonEdit.aspx.designer.cs">
+      <DependentUpon>PersonEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\CommunityRole.cs" />
