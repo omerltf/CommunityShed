@@ -22,8 +22,7 @@ namespace CommunityShed
         {
             string communityName = CommunityNameTextBox.Text;
             bool isOpen = CommunityIsAvailableCheckBox.Checked;
-            CustomPrincipal user = (CustomPrincipal)Page.User;
-            int personId = user.PersonId;
+            int personId = CustomUser.PersonId;
 
             int communityId = DatabaseHelper.ExecuteScalar<int>(@"
                 

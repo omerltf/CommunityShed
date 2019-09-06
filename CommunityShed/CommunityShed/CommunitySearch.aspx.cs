@@ -22,8 +22,7 @@ namespace CommunityShed
             }
             if (!IsPostBack)
             {
-                CustomPrincipal user = (CustomPrincipal)Page.User;
-                int personId = user.PersonId;
+                int personId = CustomUser.PersonId;
                 DataTable dt = DatabaseHelper.Retrieve(@"
                     select * from Community where CommunityId not in (
 	                select CommunityId from PersonCommunity
@@ -42,8 +41,7 @@ namespace CommunityShed
         {
             Button button = (Button)sender;
             int communityId = int.Parse(button.CommandArgument);
-            CustomPrincipal user = (CustomPrincipal)Page.User;
-            int personId = user.PersonId;
+            int personId = CustomUser.PersonId;
 
             DatabaseHelper.Execute(@"
             begin tran;

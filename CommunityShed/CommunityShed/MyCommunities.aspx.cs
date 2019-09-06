@@ -23,8 +23,7 @@ namespace CommunityShed
             }
             if (!IsPostBack)
             {
-                CustomPrincipal user = (CustomPrincipal)Page.User;
-                personId = user.PersonId;
+                personId = CustomUser.PersonId;
                 DataTable dt = DatabaseHelper.Retrieve(@"
                     select pc.CommunityId, pc.PersonCommunityStatusId, c.CommunityName, c.IsOpen
                     from PersonCommunity pc
