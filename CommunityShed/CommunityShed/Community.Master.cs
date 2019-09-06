@@ -17,9 +17,6 @@ namespace CommunityShed
         {
             if (!IsPostBack)
             {
-                // TODO Remove this after the active community is properly being set!!!
-                CommunityState.SetActiveCommunity(1);
-
                 int? communityId = CommunityState.GetActiveCommunity();
                 if (communityId != null)
                 {

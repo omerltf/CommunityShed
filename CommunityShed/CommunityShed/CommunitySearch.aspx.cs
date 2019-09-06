@@ -1,5 +1,6 @@
 ﻿using CommunityShed.Data;
 using CommunityShed.Security;
+using CommunityShed.State;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -73,7 +74,9 @@ namespace CommunityShed
             new SqlParameter("@PersonId", personId),
             new SqlParameter("@CommunityId", communityId));
 
-            Response.Redirect("~/MyCommunitites.aspx");
+            CommunityState.SetActiveCommunity(communityId);
+
+            Response.Redirect("~/Community.aspx");
         }
     }
 }

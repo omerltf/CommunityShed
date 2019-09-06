@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MyCommunities.aspx.cs" Inherits="CommunityShed.MyCommunities" %>
 <%@ Import Namespace="System.Data" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 
     <h2>My Communities</h2>
 
@@ -21,7 +21,7 @@
             <tr>
                 <td><%# Item.Field<string>("CommunityName")%></td>
                 <td><%# Item.Field<bool>("IsOpen") %></td>
-                <td><asp:HyperLink runat="server" CssClass="btn btn-secondary btn-sm" NavigateUrl="~/Community.aspx" Text="Select" /></td>
+                <td> <asp:Button runat="server" CssClass="btn btn-secondary btn-sm" CommandArgument='<%# Item.Field<int>("CommunityId") %>' OnClick="SelectButton_Click" ID="SelectButton" Text="Select" /> </td>
             </tr>
         </ItemTemplate>
         <FooterTemplate>

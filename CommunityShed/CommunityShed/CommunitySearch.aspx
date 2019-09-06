@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CommunitySearch.aspx.cs" Inherits="CommunityShed.CommunitySearch" %>
 <%@ Import Namespace="System.Data" %>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 
     <h2>Communities List</h2>
 

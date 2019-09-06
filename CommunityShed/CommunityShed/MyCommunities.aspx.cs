@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using CommunityShed.State;
 
 namespace CommunityShed
 {
@@ -37,6 +38,14 @@ namespace CommunityShed
                     CommunitiesRepeater.DataBind();
                 }
             }
+        }
+
+        protected void SelectButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            int communityId = int.Parse(button.CommandArgument);
+            CommunityState.SetActiveCommunity(communityId);
+            Response.Redirect("~/Community.aspx");
         }
     }
 }
