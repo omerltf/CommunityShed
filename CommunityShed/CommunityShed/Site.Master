@@ -27,17 +27,11 @@
                         <asp:HyperLink CssClass="nav-link" ID="HomeHyperLink" NavigateUrl="~/Default.aspx" Text="Home" runat="server" />
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" ID="PersonAddHyperLink" NavigateUrl="~/PersonAdd.aspx" Text="Person" runat="server" />
-                    </li>
-                    <li class="nav-item">
-                        <asp:HyperLink CssClass="nav-link" ID="CommunityAddHyperLink" NavigateUrl="~/CommunityAdd.aspx" Text="Community" runat="server" />
-                    </li>
-                    <li class="nav-item">
                         <asp:HyperLink CssClass="nav-link" ID="PersonEditHyperLink" NavigateUrl="~/PersonEdit.aspx" Text="Edit Profile" runat="server" />
                     </li>
-                    <li class="nav-item">
+                    <%--<li class="nav-item">
                         <asp:HyperLink CssClass="nav-link" ID="CommunityEditHyperLink" NavigateUrl="~/CommunityEdit.aspx" Text="Edit Community" runat="server" />
-                    </li>
+                    </li>--%>
                 </ul>
             </div>
             <asp:Panel ID="UserInformation" runat="server">
