@@ -70,7 +70,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-	<Content Include="CommunityAdd.aspx" />
+    <Content Include="Community.aspx" />
+    <Content Include="CommunityAdd.aspx" />
     <Content Include="CommunityEdit.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
@@ -100,6 +101,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Community.aspx.cs">
+      <DependentUpon>Community.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Community.aspx.designer.cs">
+      <DependentUpon>Community.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CommunityAdd.aspx.cs">
       <DependentUpon>CommunityAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,7 +122,7 @@
     <Compile Include="CommunityEdit.aspx.designer.cs">
       <DependentUpon>CommunityEdit.aspx</DependentUpon>
     </Compile>
-	<Compile Include="BasePage.cs">
+    <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
