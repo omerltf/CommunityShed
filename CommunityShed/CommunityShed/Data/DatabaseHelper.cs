@@ -52,6 +52,27 @@ namespace CommunityShed.Data
             }
         }
 
+        public static TValueType ExecuteScalar<TValueType>(string sql, params SqlParameter[] parameters)
+        {
+            TValueType value = default(TValueType);
+
+            using (var connection = new SqlConnection(GetConnectionString()))
+            {
+                using (var command = new SqlCommand(sql, connection))
+                {
+                    foreach (var parameter in parameters)
+                    {
+                        command.Parameters.Add(parameter);
+                    }
+
+                    command.Connection.Open();
+                    value = (TValueType)command.ExecuteScalar();
+                }
+            }
+
+            return value;
+        }
+
         public static int? Insert(string sql, params SqlParameter[] parameters)
         {
             // Append a query to the passed in insert query
@@ -105,5 +126,6 @@ namespace CommunityShed.Data
         {
             return ConfigurationManager.ConnectionStrings[ConnectionStringName].ConnectionString;
         }
+
     }
 }

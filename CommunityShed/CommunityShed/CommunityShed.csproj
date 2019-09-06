@@ -73,8 +73,10 @@
     <Content Include="Community.aspx" />
     <Content Include="CommunityAdd.aspx" />
     <Content Include="CommunityEdit.aspx" />
+    <Content Include="CommunitySearch.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="MyCommunities.aspx" />
     <Content Include="NotAuthorized.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -136,6 +138,13 @@
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="CommunitySearch.aspx.cs">
+      <DependentUpon>CommunitySearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunitySearch.aspx.designer.cs">
+      <DependentUpon>CommunitySearch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -153,6 +162,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyCommunities.aspx.cs">
+      <DependentUpon>MyCommunities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyCommunities.aspx.designer.cs">
+      <DependentUpon>MyCommunities.aspx</DependentUpon>
     </Compile>
     <Compile Include="NotAuthorized.aspx.cs">
       <DependentUpon>NotAuthorized.aspx</DependentUpon>

@@ -10,33 +10,24 @@
 namespace CommunityShed {
     
     
-    public partial class MyCommunities {
+    public partial class CommunitySearch {
         
         /// <summary>
-        /// CommunitiesRepeater control.
+        /// CommunitySearchRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CommunitiesRepeater;
+        protected global::System.Web.UI.WebControls.Repeater CommunitySearchRepeater;
         
         /// <summary>
-        /// AddCommunityHyperLink control.
+        /// HomeHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AddCommunityHyperLink;
-        
-        /// <summary>
-        /// JoinCommunityHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink JoinCommunityHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink HomeHyperLink;
     }
 }

@@ -20,8 +20,7 @@ namespace CommunityShed
 
             if (!IsPostBack)
             {
-                CustomPrincipal user = (CustomPrincipal)Page.User;
-                personId = user.PersonId;
+                personId = CustomUser.PersonId;
                 DataTable dt = DatabaseHelper.Retrieve(@"
                     select Name, Email
                     from Person
