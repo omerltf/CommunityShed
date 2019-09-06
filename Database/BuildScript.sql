@@ -1,83 +1,83 @@
 USE [master]
 GO
-/****** Object:  Database [CommunityShedDB]    Script Date: 9/5/2019 11:27:09 AM ******/
-CREATE DATABASE [CommunityShedDB]
+/****** Object:  Database [CommunityShed]    Script Date: 9/5/2019 11:27:09 AM ******/
+CREATE DATABASE [CommunityShed]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'CommunityShedDB', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\CommunityShedDB.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'CommunityShed', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\CommunityShed.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'CommunityShedDB_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\CommunityShedDB_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'CommunityShed_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\CommunityShed_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
 GO
-ALTER DATABASE [CommunityShedDB] SET COMPATIBILITY_LEVEL = 140
+ALTER DATABASE [CommunityShed] SET COMPATIBILITY_LEVEL = 140
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
-EXEC [CommunityShedDB].[dbo].[sp_fulltext_database] @action = 'enable'
+EXEC [CommunityShed].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
-ALTER DATABASE [CommunityShedDB] SET ANSI_NULL_DEFAULT OFF 
+ALTER DATABASE [CommunityShed] SET ANSI_NULL_DEFAULT OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET ANSI_NULLS OFF 
+ALTER DATABASE [CommunityShed] SET ANSI_NULLS OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET ANSI_PADDING OFF 
+ALTER DATABASE [CommunityShed] SET ANSI_PADDING OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET ANSI_WARNINGS OFF 
+ALTER DATABASE [CommunityShed] SET ANSI_WARNINGS OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET ARITHABORT OFF 
+ALTER DATABASE [CommunityShed] SET ARITHABORT OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET AUTO_CLOSE OFF 
+ALTER DATABASE [CommunityShed] SET AUTO_CLOSE OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET AUTO_SHRINK OFF 
+ALTER DATABASE [CommunityShed] SET AUTO_SHRINK OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET AUTO_UPDATE_STATISTICS ON 
+ALTER DATABASE [CommunityShed] SET AUTO_UPDATE_STATISTICS ON 
 GO
-ALTER DATABASE [CommunityShedDB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+ALTER DATABASE [CommunityShed] SET CURSOR_CLOSE_ON_COMMIT OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET CURSOR_DEFAULT  GLOBAL 
+ALTER DATABASE [CommunityShed] SET CURSOR_DEFAULT  GLOBAL 
 GO
-ALTER DATABASE [CommunityShedDB] SET CONCAT_NULL_YIELDS_NULL OFF 
+ALTER DATABASE [CommunityShed] SET CONCAT_NULL_YIELDS_NULL OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET NUMERIC_ROUNDABORT OFF 
+ALTER DATABASE [CommunityShed] SET NUMERIC_ROUNDABORT OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET QUOTED_IDENTIFIER OFF 
+ALTER DATABASE [CommunityShed] SET QUOTED_IDENTIFIER OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET RECURSIVE_TRIGGERS OFF 
+ALTER DATABASE [CommunityShed] SET RECURSIVE_TRIGGERS OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET  DISABLE_BROKER 
+ALTER DATABASE [CommunityShed] SET  DISABLE_BROKER 
 GO
-ALTER DATABASE [CommunityShedDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+ALTER DATABASE [CommunityShed] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+ALTER DATABASE [CommunityShed] SET DATE_CORRELATION_OPTIMIZATION OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET TRUSTWORTHY OFF 
+ALTER DATABASE [CommunityShed] SET TRUSTWORTHY OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+ALTER DATABASE [CommunityShed] SET ALLOW_SNAPSHOT_ISOLATION OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET PARAMETERIZATION SIMPLE 
+ALTER DATABASE [CommunityShed] SET PARAMETERIZATION SIMPLE 
 GO
-ALTER DATABASE [CommunityShedDB] SET READ_COMMITTED_SNAPSHOT OFF 
+ALTER DATABASE [CommunityShed] SET READ_COMMITTED_SNAPSHOT OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET HONOR_BROKER_PRIORITY OFF 
+ALTER DATABASE [CommunityShed] SET HONOR_BROKER_PRIORITY OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET RECOVERY FULL 
+ALTER DATABASE [CommunityShed] SET RECOVERY FULL 
 GO
-ALTER DATABASE [CommunityShedDB] SET  MULTI_USER 
+ALTER DATABASE [CommunityShed] SET  MULTI_USER 
 GO
-ALTER DATABASE [CommunityShedDB] SET PAGE_VERIFY CHECKSUM  
+ALTER DATABASE [CommunityShed] SET PAGE_VERIFY CHECKSUM  
 GO
-ALTER DATABASE [CommunityShedDB] SET DB_CHAINING OFF 
+ALTER DATABASE [CommunityShed] SET DB_CHAINING OFF 
 GO
-ALTER DATABASE [CommunityShedDB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+ALTER DATABASE [CommunityShed] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
 GO
-ALTER DATABASE [CommunityShedDB] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+ALTER DATABASE [CommunityShed] SET TARGET_RECOVERY_TIME = 60 SECONDS 
 GO
-ALTER DATABASE [CommunityShedDB] SET DELAYED_DURABILITY = DISABLED 
+ALTER DATABASE [CommunityShed] SET DELAYED_DURABILITY = DISABLED 
 GO
-EXEC sys.sp_db_vardecimal_storage_format N'CommunityShedDB', N'ON'
+EXEC sys.sp_db_vardecimal_storage_format N'CommunityShed', N'ON'
 GO
-ALTER DATABASE [CommunityShedDB] SET QUERY_STORE = OFF
+ALTER DATABASE [CommunityShed] SET QUERY_STORE = OFF
 GO
-USE [CommunityShedDB]
+USE [CommunityShed]
 GO
 /****** Object:  Table [dbo].[Community]    Script Date: 9/5/2019 11:27:09 AM ******/
 SET ANSI_NULLS ON
@@ -104,7 +104,7 @@ CREATE TABLE [dbo].[Person](
 	[PersonId] [int] IDENTITY(1,1) NOT NULL,
 	[Name] [nvarchar](100) NOT NULL,
 	[Email] [nvarchar](100) NOT NULL,
-	[Password] [nvarchar](50) NOT NULL,
+	[HashedPassword] [nvarchar](MAX) NOT NULL,
  CONSTRAINT [PK_Person] PRIMARY KEY CLUSTERED 
 (
 	[PersonId] ASC
@@ -151,15 +151,15 @@ CREATE TABLE [dbo].[PersonCommunityStatus](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Roles]    Script Date: 9/5/2019 11:27:09 AM ******/
+/****** Object:  Table [dbo].[Role]    Script Date: 9/5/2019 11:27:09 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[Roles](
+CREATE TABLE [dbo].[Role](
 	[RoleId] [int] IDENTITY(1,1) NOT NULL,
 	[RoleName] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_Roles] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_Role] PRIMARY KEY CLUSTERED 
 (
 	[RoleId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -177,11 +177,11 @@ SET IDENTITY_INSERT [dbo].[Community] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Person] ON 
 GO
-INSERT [dbo].[Person] ([PersonId], [Name], [Email], [Password]) VALUES (1, N'James Churchill', N'jc@123.com', N'password')
+INSERT [dbo].[Person] ([PersonId], [Name], [Email], [HashedPassword]) VALUES (1, N'James Churchill', N'james@smashdev.com', N'$2a$12$f.QnNB1WKRd81Muow.1Okeq7LnzJCYb/dYoV3bDPZXF.tq.tff3o6')
 GO
-INSERT [dbo].[Person] ([PersonId], [Name], [Email], [Password]) VALUES (2, N'Omer Latif', N'ol@321.com', N'password')
+INSERT [dbo].[Person] ([PersonId], [Name], [Email], [HashedPassword]) VALUES (2, N'Omer Latif', N'ol@321.com', N'$2a$12$f.QnNB1WKRd81Muow.1Okeq7LnzJCYb/dYoV3bDPZXF.tq.tff3o6')
 GO
-INSERT [dbo].[Person] ([PersonId], [Name], [Email], [Password]) VALUES (3, N'Bill', N'James@321.com', N'password')
+INSERT [dbo].[Person] ([PersonId], [Name], [Email], [HashedPassword]) VALUES (3, N'Bill Smithh', N'bill@smith.com', N'$2a$12$f.QnNB1WKRd81Muow.1Okeq7LnzJCYb/dYoV3bDPZXF.tq.tff3o6')
 GO
 SET IDENTITY_INSERT [dbo].[Person] OFF
 GO
@@ -227,17 +227,17 @@ INSERT [dbo].[PersonCommunityStatus] ([PersonCommunityStatusId], [PersonCommunit
 GO
 SET IDENTITY_INSERT [dbo].[PersonCommunityStatus] OFF
 GO
-SET IDENTITY_INSERT [dbo].[Roles] ON 
+SET IDENTITY_INSERT [dbo].[Role] ON 
 GO
-INSERT [dbo].[Roles] ([RoleId], [RoleName]) VALUES (2, N'Member')
+INSERT [dbo].[Role] ([RoleId], [RoleName]) VALUES (2, N'Member')
 GO
-INSERT [dbo].[Roles] ([RoleId], [RoleName]) VALUES (3, N'Approver')
+INSERT [dbo].[Role] ([RoleId], [RoleName]) VALUES (3, N'Approver')
 GO
-INSERT [dbo].[Roles] ([RoleId], [RoleName]) VALUES (4, N'Reviewer')
+INSERT [dbo].[Role] ([RoleId], [RoleName]) VALUES (4, N'Reviewer')
 GO
-INSERT [dbo].[Roles] ([RoleId], [RoleName]) VALUES (5, N'Enforcer')
+INSERT [dbo].[Role] ([RoleId], [RoleName]) VALUES (5, N'Enforcer')
 GO
-SET IDENTITY_INSERT [dbo].[Roles] OFF
+SET IDENTITY_INSERT [dbo].[Role] OFF
 GO
 ALTER TABLE [dbo].[PersonCommunity]  WITH CHECK ADD  CONSTRAINT [FK_PersonCommunity_Community1] FOREIGN KEY([CommunityId])
 REFERENCES [dbo].[Community] ([CommunityId])
@@ -259,12 +259,12 @@ REFERENCES [dbo].[PersonCommunity] ([PersonCommunityId])
 GO
 ALTER TABLE [dbo].[PersonCommunityRole] CHECK CONSTRAINT [FK_PersonCommunityRole_PersonCommunity]
 GO
-ALTER TABLE [dbo].[PersonCommunityRole]  WITH CHECK ADD  CONSTRAINT [FK_PersonCommunityRole_Roles] FOREIGN KEY([RoleId])
-REFERENCES [dbo].[Roles] ([RoleId])
+ALTER TABLE [dbo].[PersonCommunityRole]  WITH CHECK ADD  CONSTRAINT [FK_PersonCommunityRole_Role] FOREIGN KEY([RoleId])
+REFERENCES [dbo].[Role] ([RoleId])
 GO
-ALTER TABLE [dbo].[PersonCommunityRole] CHECK CONSTRAINT [FK_PersonCommunityRole_Roles]
+ALTER TABLE [dbo].[PersonCommunityRole] CHECK CONSTRAINT [FK_PersonCommunityRole_Role]
 GO
 USE [master]
 GO
-ALTER DATABASE [CommunityShedDB] SET  READ_WRITE 
+ALTER DATABASE [CommunityShed] SET  READ_WRITE 
 GO
