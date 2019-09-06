@@ -17,10 +17,6 @@ namespace CommunityShed
         int personId = 0;               //get personId
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Request.IsAuthenticated)
-            {
-                Response.Redirect("~/NotAuthorized,aspx");
-            }
             if (!IsPostBack)
             {
                 personId = CustomUser.PersonId;
