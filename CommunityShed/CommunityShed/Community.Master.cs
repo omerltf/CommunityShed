@@ -13,13 +13,12 @@ namespace CommunityShed
 {
     public partial class CommunityMaster : BaseMasterPage
     {
-        int? communityId = null;
-        int? creatorPersonId = null;
+        State.Community community = null;
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            communityId = CommunityState.GetActiveCommunity();
-            if (communityId == null)
+            community = CommunityState.GetActiveCommunity();
+            if (community == null)
             {
                 Response.Redirect("~/MyCommunities.aspx");
             }
@@ -29,27 +28,7 @@ namespace CommunityShed
         {
             if (!IsPostBack)
             {
-                int personId = CustomPage.CustomUser.PersonId;
-
-                DataTable communityDataTable = DatabaseHelper.Retrieve(@"
-                    select c.CommunityName, c.CreatorPersonId
-                    from Community c
-                    join PersonCommunity pc on pc.CommunityId = c.CommunityId
-                    where c.CommunityId = @CommunityId and pc.PersonId = @PersonId
-                ",
-                    new SqlParameter("@CommunityId", communityId.Value),
-                    new SqlParameter("@PersonId", personId));
-
-                if (communityDataTable.Rows.Count == 0)
-                {
-                    Response.Redirect("~/MyCommunities.aspx");
-                }
-
-                creatorPersonId = communityDataTable.Rows[0].Field<int?>("CreatorPersonId");
-
-                string communityName = communityDataTable.Rows[0].Field<string>("CommunityName");
-
-                CommunityNameLabel.Text = communityName;
+                CommunityNameLabel.Text = community.CommunityName;
             }
         }
 
@@ -84,7 +63,7 @@ namespace CommunityShed
 
             // If the current user is the creator of this community
             // then add an "Edit Community" link.
-            if (personId == creatorPersonId.Value)
+            if (personId == community.CreatorPersonId)
             {
                 AddNavLink("Edit Community", "CommunityEdit.aspx");
             }

@@ -68,7 +68,7 @@ namespace CommunityShed.Security
         /// <returns>A boolean indicating if the current user has the provided role for the user's active community.</returns>
         public bool IsInRole(string role)
         {
-            int? communityId = CommunityState.GetActiveCommunity();
+            int? communityId = CommunityState.GetActiveCommunityId();
 
             if (communityId != null)
             {

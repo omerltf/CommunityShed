@@ -17,7 +17,7 @@ namespace CommunityShed
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            communityId = CommunityState.GetActiveCommunity();
+            communityId = CommunityState.GetActiveCommunityId();
             if (communityId == null)
             {
                 Response.Redirect("~/MyCommunities.aspx");
