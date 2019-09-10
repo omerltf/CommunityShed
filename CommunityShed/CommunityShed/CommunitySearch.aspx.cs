@@ -68,7 +68,7 @@ namespace CommunityShed
             new SqlParameter("@PersonId", personId),
             new SqlParameter("@CommunityId", communityId));
 
-            CommunityState.SetActiveCommunity(communityId);
+            CommunityState.SetActiveCommunity(communityId, personId);
 
             Response.Redirect("~/Community.aspx");
         }

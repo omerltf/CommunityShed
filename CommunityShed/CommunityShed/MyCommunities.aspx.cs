@@ -39,7 +39,8 @@ namespace CommunityShed
         {
             Button button = (Button)sender;
             int communityId = int.Parse(button.CommandArgument);
-            CommunityState.SetActiveCommunity(communityId);
+            int personId = CustomUser.PersonId;
+            CommunityState.SetActiveCommunity(communityId, personId);
             Response.Redirect("~/Community.aspx");
         }
     }
